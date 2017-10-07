@@ -16,5 +16,5 @@ javac Main.java
 java Main
 <hr>
 <h3>Updates and Fixes</h3>
-Catching exception when user starts to decrypt unencrypted file -> Printing: File is not encrypted.
+Catching exception when user starts to decrypt unencrypted file -> Printing: File is not encrypted.<br>
 Adding third option to read in console encrypted file without decrypting.
