@@ -12,8 +12,9 @@ public class Main {
     public static void main(String[] args){
 
         System.out.println("What do you want to do ?");
-        System.out.println("1. Encryption");
-        System.out.println("2. Decryption");
+        System.out.println("1. Encryption (Encrypt a file)");
+        System.out.println("2. Decryption (Decrypt a file)");
+        System.out.println("3. Read encrypted file (File will not be decrypted. It will just show it's content)");
 
         int answer = getAnswer();
 
@@ -30,21 +31,34 @@ public class Main {
                 System.out.println("Some error occurred.");
             }
 
-        }else if(answer == 2) {
+        }else if( answer == 2 ) {
 
             System.out.println("You have selected Decryption.");
 
             getFile();
 
-            if( file != null && !fileText.equals("") ){
+            if (file != null && !fileText.equals("")) {
                 String password = getPassword(2);
                 new Decryption(file, fileText, password);
             } else {
                 System.out.println("Some error occurred.");
             }
 
+        }else if( answer == 3 ){
+
+            System.out.println("You have selected Read encrypted file.");
+
+            getFile();
+
+            if (file != null && !fileText.equals("")) {
+                String password = getPassword(3);
+                new DecryptionRead(fileText, password);
+            } else {
+                System.out.println("Some error occurred.");
+            }
+
         }else {
-            System.out.println("You have to choose between 1 or 2");
+            System.out.println("You have to choose between 1, 2 or 3.");
         }
 
     }
@@ -53,7 +67,7 @@ public class Main {
 
         if( style == 1 ){
             System.out.println("Set password/key for encryption. You can also leave it empty.");
-        } else {
+        } else if( style == 2 || style == 3 ) {
             System.out.println("Write password/key that was used for encryption.");
         }
 
@@ -120,19 +134,19 @@ public class Main {
 
             try {
 
-                System.out.print("(1/2) -> ");
+                System.out.print("(1/2/3) -> ");
 
                 Scanner input = new Scanner(System.in);
                 answer = input.nextInt();
 
-                if(answer == 1 || answer == 2){
+                if(answer == 1 || answer == 2 || answer == 3){
                     bool = false;
                 }else{
-                    System.out.println("You have to choose between 1 or 2");
+                    System.out.println("You have to choose between 1, 2 or 3.");
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("You have to choose between 1 or 2");
+                System.out.println("You have to choose between 1, 2 or 3.");
             }
 
         }

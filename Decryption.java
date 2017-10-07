@@ -74,6 +74,8 @@ public class Decryption {
                     e.printStackTrace();
                 } catch (BadPaddingException wpw){
                     System.out.println("Wrong password.");
+                } catch ( ArrayIndexOutOfBoundsException ae ){
+                    System.out.println("File is not encrypted.");
                 }
 
             } catch (InvalidKeyException e) {
