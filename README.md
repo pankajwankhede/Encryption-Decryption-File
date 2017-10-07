@@ -6,7 +6,7 @@ that will be used for later decrypting. Program is using AES with ECB mode. Pass
 <hr>
 <h3>When do you want to use it and why it is useful</h3>
 It is good to use it on files where you have stored sensitive datas. For example you can have many passwords that you are using and you do
-not remember them all. So you can put them into the text file and encrypt that file so you only need to know one password (that is used for encryption/decryption).
+not remember them all. So you can put them into the text file and encrypt that file so you only need to know one password (that is used for encryption).
 <hr>
 <h3>What do you need</h3>
 Java 8+, jdk
