@@ -1,5 +1,5 @@
 <h2>Encryption and Decryption Console Java Program to a File</h2>
-<p></p>
+<p>Encrypt and Decrypt file with password.</p>
 <h3>How it works</h3>
 It is console-input program. Firstly, It's gonna ask if you want to do Encryption or Decryption. Then you need to set a file and password
 that will be used for later decrypting. Program is using AES with ECB mode. Password is always hashed with SHA-256 before encryption.
@@ -14,3 +14,7 @@ Java 8+, jdk
 <h3>How to run it</h3>
 javac Main.java
 java Main
+<hr>
+<h3>Updates and Fixes</h3>
+Catching exception when user starts to decrypt unencrypted file -> Printing: File is not encrypted.
+Adding third option to read in console encrypted file without decrypting.
